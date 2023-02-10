@@ -13,7 +13,7 @@ struct AirView: View {
             
             ZStack {
                 Rectangle()
-                    .foregroundColor(.black)
+                    .foregroundColor(Color(red: 0.098, green: 0.098, blue: 0.098))
                     .cornerRadius(10)
                     
 //                    .frame(height: 250)

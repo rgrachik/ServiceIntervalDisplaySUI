@@ -20,7 +20,7 @@ struct ContentView: View {
                 GearOilView()
                 
                 HStack{
-                    NavigationLink("Go", destination: OilView())
+                    NavigationLink("Setttings", destination: SettingsView())
                     
                         .navigationTitle(Text("Service Interval Display"))
                         .frame(width: 80, height: 40)
@@ -30,6 +30,10 @@ struct ContentView: View {
                         .padding()
                     
                     Button("Update", action: {})
+                        .frame(width: 80, height: 40)
+                        .background(Color.green)
+                        .cornerRadius(10)
+                        .foregroundColor(.white)
                 }
             }
             
