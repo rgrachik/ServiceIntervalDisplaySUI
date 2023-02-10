@@ -23,6 +23,7 @@ struct OilView: View {
                         Text("Motor Oil")
                             .foregroundColor(.white)
                             .font(.largeTitle)
+                            .bold()
                             .padding()
                         Spacer()
                     }
@@ -72,15 +73,17 @@ struct OilView: View {
                        
                         
                         HStack {
-                            Text("Parameters")
-                                .font(.title2)
+                            Text("Detail")
+                                .font(.title)
                            
                             Spacer()
                         }
+                        .padding()
+                        Divider()
                         Form {
                             HStack {
                                 Text("Oil volume")
-                                    .font(.title3)
+                                    .font(.headline)
                                 Spacer()
                                 Text("\(oil.oilVolume) L.")
                             }
@@ -88,7 +91,7 @@ struct OilView: View {
                             
                             HStack {
                                 Text("Change mileage")
-                                    .font(.title3)
+                                    .font(.headline)
                                 Spacer()
                                 Text("\(oil.oilChangeMileage) km.")
                             }
@@ -96,7 +99,7 @@ struct OilView: View {
                             
                             HStack {
                                 Text("Next change")
-                                    .font(.title3)
+                                    .font(.headline)
                                 Spacer()
                                 Text("\(oil.nextOilChangeMileage()) km.")
                             }
