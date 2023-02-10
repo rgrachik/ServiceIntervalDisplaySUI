@@ -13,43 +13,115 @@ struct OilView: View {
             
             ZStack {
                 Rectangle()
-                    .foregroundColor(Color(red: 0.098, green: 0.098, blue: 0.098))
+//                    .foregroundColor(Color(red: 0.098, green: 0.098, blue: 0.098))
+                    .foregroundColor(.black)
                     .cornerRadius(10)
-               
+                
                 VStack{
-                    Spacer()
-                    Text("Motor Oil")
-                        .foregroundColor(.white)
-                        .font(.largeTitle)
-                    
-                    HStack(alignment: .center){
+                    HStack{
                         
-                        Text(oil.oilName)
+                        Text("Motor Oil")
                             .foregroundColor(.white)
-                            .font(.title)
+                            .font(.largeTitle)
+                            .padding()
+                        Spacer()
+                    }
+                                        
+                    VStack {
+                        VStack{
+                            HStack {
+                                Spacer()
+                                Text(oil.oilName)
+                                    .foregroundColor(.white)
+                                    .font(.title)
+                            }
                             
-                        
-                        Gauge(value: Double(147800), in: Double(oil.oilChangeMileage)...Double(oil.nextOilChangeMileage())) {
-                            Text("Oil")
+                            HStack {
+                                Spacer()
+                                Text(oil.oilSAEType[0])
+                            }
+                            
+                            
                             
                         }
-                        .foregroundColor(.white)
-                        .tint(.yellow)
-                        .gaugeStyle(.accessoryCircularCapacity)
+                        .padding()
+                        List{
+                            HStack {
+                                    Image("oil")
+                                        .colorMultiply(.green)
+                                
+                                Gauge(value: Double(149800), in: Double(oil.oilChangeMileage)...Double(oil.nextOilChangeMileage())) {}
+                                .foregroundColor(.white)
+                                .tint(.orange)
+                                .gaugeStyle(.linearCapacity)
+                                
+                                Image("oil")
+                                    .colorMultiply(.red)
+                            }
+                            
+                            
+                        }
+                        .scrollDisabled(true)
+                        .cornerRadius(15)
+                        .frame(height: 200)
+                        .ignoresSafeArea()
+                        .shadow(color: .orange, radius: 100)
+                        
+                       
+                        .padding()
+                       
+                        
+                        HStack {
+                            Text("Parameters")
+                                .font(.title2)
+                           
+                            Spacer()
+                        }
+                        Form {
+                            HStack {
+                                Text("Oil volume")
+                                    .font(.title3)
+                                Spacer()
+                                Text("\(oil.oilVolume) L.")
+                            }
+                            .padding(4)
+                            
+                            HStack {
+                                Text("Change mileage")
+                                    .font(.title3)
+                                Spacer()
+                                Text("\(oil.oilChangeMileage) km.")
+                            }
+                            .padding(4)
+                            
+                            HStack {
+                                Text("Next change")
+                                    .font(.title3)
+                                Spacer()
+                                Text("\(oil.nextOilChangeMileage()) km.")
+                            }
+                            .padding(4)
+                            
+                        }
+                        .formStyle(.columns)
+                        .scrollDisabled(true)
+                        
+                        
+                        
                     }
-                        Spacer()
+                    Spacer()
                 }
             }
-
+            
             Spacer()
         }
-//        .ignoresSafeArea()
+        //        .ignoresSafeArea()
         .preferredColorScheme(.dark)
     }
-   
-    }
     
-        
+}
+
+
 
 
 struct smallView_Previews: PreviewProvider {

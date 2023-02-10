@@ -42,6 +42,8 @@ struct SettingsView: View {
                 .pickerStyle(.navigationLink)
 //                .frame(height:200)
                 Spacer()
+                
+                
             }
         }
     }

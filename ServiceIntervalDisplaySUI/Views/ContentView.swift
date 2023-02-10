@@ -15,7 +15,8 @@ struct ContentView: View {
             VStack{
                 
                 OilView()
-                    .padding(4)
+                    .padding(6)
+                    
                 AirView()
                 GearOilView()
                 
@@ -36,7 +37,7 @@ struct ContentView: View {
                         .foregroundColor(.white)
                 }
             }
-            
+            .background(Color(red: 0.098, green: 0.098, blue: 0.098))
         }
         
         .preferredColorScheme(.dark)
