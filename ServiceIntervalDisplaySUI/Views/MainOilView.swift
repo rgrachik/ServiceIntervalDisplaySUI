@@ -7,18 +7,15 @@
 
 import SwiftUI
 
-struct OilView: View {
+struct MainOilView: View {
+    
+    let gradient = Gradient(colors: [.green, .red])
+    
     var body: some View {
         VStack {
-            
             ZStack {
-                Rectangle()
-//                    .foregroundColor(Color(red: 0.098, green: 0.098, blue: 0.098))
-                    .foregroundColor(.black)
-                    .cornerRadius(10)
-                
-                VStack{
-                    HStack{
+                VStack {
+                    HStack {
                         
                         Text("Motor Oil")
                             .foregroundColor(.white)
@@ -27,7 +24,7 @@ struct OilView: View {
                             .padding()
                         Spacer()
                     }
-                                        
+                    
                     VStack {
                         VStack{
                             HStack {
@@ -35,29 +32,46 @@ struct OilView: View {
                                 Text(oil.oilName)
                                     .foregroundColor(.white)
                                     .font(.title)
+                                    .bold()
                             }
                             
                             HStack {
                                 Spacer()
-                                Text(oil.oilSAEType[0])
+                                Text(oil.oilSAEType[3])
                             }
-                            
-                            
                             
                         }
                         .padding()
                         List{
                             HStack {
-                                    Image("oil")
-                                        .colorMultiply(.green)
+                                Image("oil")
+                                    .colorMultiply(.green)
                                 
-                                Gauge(value: Double(149800), in: Double(oil.oilChangeMileage)...Double(oil.nextOilChangeMileage())) {}
-                                .foregroundColor(.white)
-                                .tint(.orange)
-                                .gaugeStyle(.linearCapacity)
+                                Gauge (value: Double(oil.currentMileage), in: Double(oil.oilChangeMileage)...Double(oil.nextOilChangeMileage())) {}
+                                    .foregroundColor(.white)
+//                                    .tint(.orange)
+                                    .tint(gradient)
+                                    .gaugeStyle(.linearCapacity)
                                 
                                 Image("oil")
                                     .colorMultiply(.red)
+                            }
+                            HStack {
+                                Text("Oil wear:")
+                                    .bold()
+                               Spacer()
+                                Text("\(oil.percentOfWear()) %")
+                                    .bold()
+                                
+                            }
+                            
+                            HStack {
+                                Text("Next service in:")
+                                    .bold()
+                                Spacer()
+                                Text("\(oil.nextOilChangeMileage()-oil.currentMileage) km.")
+                                    .bold()
+                                
                             }
                             
                             
@@ -68,20 +82,30 @@ struct OilView: View {
                         .ignoresSafeArea()
                         .shadow(color: .orange, radius: 100)
                         
-                       
+                        
                         .padding()
-                       
                         
                         HStack {
                             Text("Detail")
                                 .font(.title)
-                           
+                            
                             Spacer()
                         }
                         .padding()
                         Divider()
                         Form {
+                            
                             HStack {
+                                
+                                Text("Oil filter")
+                                    .font(.headline)
+                                Spacer()
+                                Text("\(oil.oilFilterName)")
+                            }
+                            .padding(4)
+                            
+                            HStack {
+                                
                                 Text("Oil volume")
                                     .font(.headline)
                                 Spacer()
@@ -104,12 +128,9 @@ struct OilView: View {
                                 Text("\(oil.nextOilChangeMileage()) km.")
                             }
                             .padding(4)
-                            
                         }
                         .formStyle(.columns)
                         .scrollDisabled(true)
-                        
-                        
                         
                     }
                     Spacer()
@@ -118,7 +139,6 @@ struct OilView: View {
             
             Spacer()
         }
-        //        .ignoresSafeArea()
         .preferredColorScheme(.dark)
     }
     
@@ -127,8 +147,8 @@ struct OilView: View {
 
 
 
-struct smallView_Previews: PreviewProvider {
+struct MainOilView_Previews: PreviewProvider {
     static var previews: some View {
-        OilView()
+        MainOilView()
     }
 }

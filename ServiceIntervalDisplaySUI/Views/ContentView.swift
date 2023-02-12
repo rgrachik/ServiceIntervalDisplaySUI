@@ -13,12 +13,13 @@ struct ContentView: View {
         NavigationStack {
             
             VStack{
-                
-                OilView()
-                    .padding(6)
-                    
-                AirView()
-                GearOilView()
+                List{
+                    SmallOilView()
+                    SmallOilView()
+                    SmallOilView()
+                }
+                .listStyle(.insetGrouped)
+                .scrollDisabled(true)
                 
                 HStack{
                     NavigationLink("Setttings", destination: SettingsView())
@@ -37,7 +38,7 @@ struct ContentView: View {
                         .foregroundColor(.white)
                 }
             }
-            .background(Color(red: 0.098, green: 0.098, blue: 0.098))
+//            .background(Color(red: 0.098, green: 0.098, blue: 0.098))
         }
         
         .preferredColorScheme(.dark)

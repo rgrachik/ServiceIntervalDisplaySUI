@@ -12,10 +12,11 @@
 		27110EF629962014006D365D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27110EF529962014006D365D /* Assets.xcassets */; };
 		27110EF929962014006D365D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27110EF829962014006D365D /* Preview Assets.xcassets */; };
 		27110F0029962099006D365D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27110EFF29962099006D365D /* SettingsView.swift */; };
-		27110F02299626C3006D365D /* OilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27110F01299626C3006D365D /* OilView.swift */; };
-		27110F0429963A23006D365D /* AirView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27110F0329963A23006D365D /* AirView.swift */; };
-		27110F0629963A5F006D365D /* GearOilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27110F0529963A5F006D365D /* GearOilView.swift */; };
+		27110F02299626C3006D365D /* MainOilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27110F01299626C3006D365D /* MainOilView.swift */; };
+		27110F0429963A23006D365D /* MainAirView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27110F0329963A23006D365D /* MainAirView.swift */; };
+		27110F0629963A5F006D365D /* MainGearOilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27110F0529963A5F006D365D /* MainGearOilView.swift */; };
 		27110F0A29964313006D365D /* Oil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27110F0929964313006D365D /* Oil.swift */; };
+		274C28A22997887E00407313 /* SmallOilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274C28A12997887E00407313 /* SmallOilView.swift */; };
 		275FF16129964DC200BFE554 /* AirFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275FF16029964DC200BFE554 /* AirFilter.swift */; };
 		275FF16329964E6800BFE554 /* CabinFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275FF16229964E6800BFE554 /* CabinFilter.swift */; };
 		275FF16729964F9E00BFE554 /* GearOil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275FF16629964F9E00BFE554 /* GearOil.swift */; };
@@ -28,10 +29,11 @@
 		27110EF529962014006D365D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27110EF829962014006D365D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		27110EFF29962099006D365D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		27110F01299626C3006D365D /* OilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OilView.swift; sourceTree = "<group>"; };
-		27110F0329963A23006D365D /* AirView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirView.swift; sourceTree = "<group>"; };
-		27110F0529963A5F006D365D /* GearOilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GearOilView.swift; sourceTree = "<group>"; };
+		27110F01299626C3006D365D /* MainOilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainOilView.swift; sourceTree = "<group>"; };
+		27110F0329963A23006D365D /* MainAirView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAirView.swift; sourceTree = "<group>"; };
+		27110F0529963A5F006D365D /* MainGearOilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGearOilView.swift; sourceTree = "<group>"; };
 		27110F0929964313006D365D /* Oil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oil.swift; sourceTree = "<group>"; };
+		274C28A12997887E00407313 /* SmallOilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallOilView.swift; sourceTree = "<group>"; };
 		275FF16029964DC200BFE554 /* AirFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirFilter.swift; sourceTree = "<group>"; };
 		275FF16229964E6800BFE554 /* CabinFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabinFilter.swift; sourceTree = "<group>"; };
 		275FF16629964F9E00BFE554 /* GearOil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GearOil.swift; sourceTree = "<group>"; };
@@ -88,9 +90,10 @@
 			isa = PBXGroup;
 			children = (
 				27110EF329962013006D365D /* ContentView.swift */,
-				27110F01299626C3006D365D /* OilView.swift */,
-				27110F0329963A23006D365D /* AirView.swift */,
-				27110F0529963A5F006D365D /* GearOilView.swift */,
+				27110F01299626C3006D365D /* MainOilView.swift */,
+				27110F0329963A23006D365D /* MainAirView.swift */,
+				27110F0529963A5F006D365D /* MainGearOilView.swift */,
+				274C28A12997887E00407313 /* SmallOilView.swift */,
 				27110EFF29962099006D365D /* SettingsView.swift */,
 			);
 			path = Views;
@@ -177,15 +180,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27110F0429963A23006D365D /* AirView.swift in Sources */,
+				27110F0429963A23006D365D /* MainAirView.swift in Sources */,
+				274C28A22997887E00407313 /* SmallOilView.swift in Sources */,
 				27110EF429962013006D365D /* ContentView.swift in Sources */,
 				27110F0A29964313006D365D /* Oil.swift in Sources */,
 				27110EF229962013006D365D /* ServiceIntervalDisplaySUIApp.swift in Sources */,
 				275FF16129964DC200BFE554 /* AirFilter.swift in Sources */,
 				275FF16329964E6800BFE554 /* CabinFilter.swift in Sources */,
-				27110F02299626C3006D365D /* OilView.swift in Sources */,
+				27110F02299626C3006D365D /* MainOilView.swift in Sources */,
 				27110F0029962099006D365D /* SettingsView.swift in Sources */,
-				27110F0629963A5F006D365D /* GearOilView.swift in Sources */,
+				27110F0629963A5F006D365D /* MainGearOilView.swift in Sources */,
 				275FF16729964F9E00BFE554 /* GearOil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

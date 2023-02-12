@@ -17,13 +17,7 @@ struct SettingsView: View {
          
             
             NavigationStack{
-                HStack{
-                    Text("Settings")
-                        .font(.largeTitle)
-                        .bold()
-                        .padding(.leading)
-                    Spacer()
-                }
+              
                 Form {
                     
                     Picker(selection: $picker,
@@ -43,7 +37,8 @@ struct SettingsView: View {
 //                .frame(height:200)
                 Spacer()
                 
-                
+                    .navigationTitle(Text("Settings"))
+                    .navigationBarTitleDisplayMode(.large)
             }
         }
     }

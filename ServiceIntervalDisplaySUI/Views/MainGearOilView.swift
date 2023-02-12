@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GearOilView: View {
+struct MainGearOilView: View {
     var body: some View {
         VStack {
             
@@ -45,6 +45,6 @@ struct GearOilView: View {
 
 struct CabinFilter_Previews: PreviewProvider {
     static var previews: some View {
-        GearOilView()
+        MainGearOilView()
     }
 }
