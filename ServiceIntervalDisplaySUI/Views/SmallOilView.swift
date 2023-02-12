@@ -8,22 +8,26 @@
 import SwiftUI
 
 struct SmallOilView: View {
-    
-    let gradient = Gradient(colors: [.green, .red])
     var body: some View {
         VStack {
             HStack {
+                Text("Engine oil")
+                    .padding()
+                Spacer()
+            }
+            HStack {
                 Text(oil.oilName)
                     .font(.title)
+                    .bold()
                 Spacer()
                 Text(oil.oilSAEType[2])
                     .font(.title)
             }
             HStack {
-                Text("Next change in \(oil.nextOilChangeMileage()) km.")
+                Text("Next change in \(oil.nextOilChangeMileage()-oil.currentMileage) km.")
                     .font(.title2)
                 Spacer()
-                Gauge (value: Double(152800), in: Double(oil.oilChangeMileage)...Double(oil.nextOilChangeMileage())) {}
+                Gauge (value: Double(oil.currentMileage), in: Double(oil.oilChangeMileage)...Double(oil.nextOilChangeMileage())) {}
                     .foregroundColor(.white)
                     .tint(.orange)
                     .gaugeStyle(.accessoryCircularCapacity)
@@ -32,7 +36,6 @@ struct SmallOilView: View {
         }
     }
     
-       
 }
 
 struct SmallOilView_Previews: PreviewProvider {

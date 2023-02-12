@@ -36,4 +36,4 @@ class Oil {
 }
 
 
-var oil = Oil(oilName: "Mobil", oilVolume: 4.7, oilFilterName: "W67/1", oilChangeMileage: 145000, currentMileage: 147000)
+var oil = Oil(oilName: "Liqui Molly Optimal", oilVolume: 4.7, oilFilterName: "Mann W67/1", oilChangeMileage: 145000, currentMileage: 147000)

@@ -26,7 +26,7 @@ struct MainAirView: View {
                         VStack{
                             HStack {
                                 Spacer()
-                                Text(oil.oilName)
+                                Text("\(airFilter.filterName)")
                                     .foregroundColor(.white)
                                     .font(.title)
                             }

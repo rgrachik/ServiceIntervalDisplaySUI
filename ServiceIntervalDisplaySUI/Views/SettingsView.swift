@@ -21,7 +21,7 @@ struct SettingsView: View {
                 Form {
                     
                     Picker(selection: $picker,
-                           content: {Text("f")},
+                           content: {},
                            label: {Text("Oil Service interval")})
                     
                     Picker(selection: $picker,

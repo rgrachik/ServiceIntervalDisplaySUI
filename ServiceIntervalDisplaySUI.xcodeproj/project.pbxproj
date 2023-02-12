@@ -20,6 +20,7 @@
 		275FF16129964DC200BFE554 /* AirFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275FF16029964DC200BFE554 /* AirFilter.swift */; };
 		275FF16329964E6800BFE554 /* CabinFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275FF16229964E6800BFE554 /* CabinFilter.swift */; };
 		275FF16729964F9E00BFE554 /* GearOil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275FF16629964F9E00BFE554 /* GearOil.swift */; };
+		27EEF23F29992EAF00423E3D /* SmallAirView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EEF23E29992EAF00423E3D /* SmallAirView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		275FF16029964DC200BFE554 /* AirFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirFilter.swift; sourceTree = "<group>"; };
 		275FF16229964E6800BFE554 /* CabinFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabinFilter.swift; sourceTree = "<group>"; };
 		275FF16629964F9E00BFE554 /* GearOil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GearOil.swift; sourceTree = "<group>"; };
+		27EEF23E29992EAF00423E3D /* SmallAirView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallAirView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				27110F0329963A23006D365D /* MainAirView.swift */,
 				27110F0529963A5F006D365D /* MainGearOilView.swift */,
 				274C28A12997887E00407313 /* SmallOilView.swift */,
+				27EEF23E29992EAF00423E3D /* SmallAirView.swift */,
 				27110EFF29962099006D365D /* SettingsView.swift */,
 			);
 			path = Views;
@@ -103,9 +106,9 @@
 			isa = PBXGroup;
 			children = (
 				27110F0929964313006D365D /* Oil.swift */,
-				275FF16629964F9E00BFE554 /* GearOil.swift */,
 				275FF16029964DC200BFE554 /* AirFilter.swift */,
 				275FF16229964E6800BFE554 /* CabinFilter.swift */,
+				275FF16629964F9E00BFE554 /* GearOil.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27110F0429963A23006D365D /* MainAirView.swift in Sources */,
+				27EEF23F29992EAF00423E3D /* SmallAirView.swift in Sources */,
 				274C28A22997887E00407313 /* SmallOilView.swift in Sources */,
 				27110EF429962013006D365D /* ContentView.swift in Sources */,
 				27110F0A29964313006D365D /* Oil.swift in Sources */,

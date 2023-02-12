@@ -14,11 +14,12 @@ struct ContentView: View {
             
             VStack{
                 List{
-                    SmallOilView()
-                    SmallOilView()
+                    NavigationLink (destination: MainOilView(), label: {SmallOilView()})
+                    
+                    NavigationLink (destination: MainAirView(), label: {SmallAirView()})
                     SmallOilView()
                 }
-                .listStyle(.insetGrouped)
+                .listStyle(.inset)
                 .scrollDisabled(true)
                 
                 HStack{
@@ -38,7 +39,6 @@ struct ContentView: View {
                         .foregroundColor(.white)
                 }
             }
-//            .background(Color(red: 0.098, green: 0.098, blue: 0.098))
         }
         
         .preferredColorScheme(.dark)

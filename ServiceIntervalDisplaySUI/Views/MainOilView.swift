@@ -69,7 +69,7 @@ struct MainOilView: View {
                                 Text("Next service in:")
                                     .bold()
                                 Spacer()
-                                Text("\(oil.nextOilChangeMileage()-oil.currentMileage) km.")
+                                Text("\(oil.nextOilChangeMileage()-oil.currentMileage) km")
                                     .bold()
                                 
                             }
@@ -109,7 +109,7 @@ struct MainOilView: View {
                                 Text("Oil volume")
                                     .font(.headline)
                                 Spacer()
-                                Text("\(oil.oilVolume) L.")
+                                Text("\(oil.oilVolume) L")
                             }
                             .padding(4)
                             
@@ -117,7 +117,7 @@ struct MainOilView: View {
                                 Text("Change mileage")
                                     .font(.headline)
                                 Spacer()
-                                Text("\(oil.oilChangeMileage) km.")
+                                Text("\(oil.oilChangeMileage) km")
                             }
                             .padding(4)
                             
@@ -125,12 +125,23 @@ struct MainOilView: View {
                                 Text("Next change")
                                     .font(.headline)
                                 Spacer()
-                                Text("\(oil.nextOilChangeMileage()) km.")
+                                Text("\(oil.nextOilChangeMileage()) km")
                             }
                             .padding(4)
                         }
                         .formStyle(.columns)
                         .scrollDisabled(true)
+                        
+                       Spacer()
+                            Button("Change oil",
+                                   action: {})
+                            .bold()
+                            .frame(width: 100, height: 40)
+                            .background(Color.green)
+                            .cornerRadius(10)
+                            .foregroundColor(.white)
+                            
+                        
                         
                     }
                     Spacer()
