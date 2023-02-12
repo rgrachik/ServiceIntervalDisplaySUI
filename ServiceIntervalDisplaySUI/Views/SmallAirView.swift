@@ -9,41 +9,29 @@ import SwiftUI
 
 struct SmallAirView: View {
     var body: some View {
-        VStack {
+   
             HStack {
                 VStack {
-                    Text(oil.oilName)
-                        .font(.title)
+                    HStack {
+                        Text("Air filter")
+                            .font(.title2)
                         .bold()
-                    Text("Next change in \(oil.nextOilChangeMileage()-oil.currentMileage) km.")
-                        .font(.title2)
+                        Spacer()
+                    }
+                    HStack {
+                        Text("\(airFilter.filterName)")
+                            .font(.title3)
+                        Spacer()
+                    }
                 }
                 Spacer()
-                Gauge (value: Double(oil.currentMileage), in: Double(oil.oilChangeMileage)...Double(oil.nextOilChangeMileage())) {}
+                Gauge (value: Double(car.currentMileage), in: Double(airFilter.filterChangeMileage)...Double(airFilter.nextFilterChangeMileage())) {Text("\(airFilter.percentOfWear()) %")}
                     .foregroundColor(.white)
                     .tint(.blue)
                     .gaugeStyle(.accessoryCircularCapacity)
             }
             .preferredColorScheme(.dark)
-            
-            HStack {
-                VStack {
-                    Text(oil.oilName)
-                        .font(.title)
-                        .bold()
-                    Text("Next change in \(oil.nextOilChangeMileage()-oil.currentMileage) km.")
-                        .font(.title2)
-                }
-                Spacer()
-                Gauge (value: Double(oil.currentMileage), in: Double(oil.oilChangeMileage)...Double(oil.nextOilChangeMileage())) {}
-                    .foregroundColor(.white)
-                    .tint(.cyan)
-                    .gaugeStyle(.accessoryCircularCapacity)
-            }
-            .preferredColorScheme(.dark)
-            
-        }
-        
+         
     }
 }
 

@@ -13,11 +13,13 @@ class CabinFilter {
     let filterName: String
     let filterChangeMileage: Int
     let serviceInterval: Int
+    let currentMileage: Int
     
-    init(filterName: String, filterChangeMileage: Int, serviceInterval: Int) {
+    init(filterName: String, filterChangeMileage: Int, serviceInterval: Int, currentMileage: Int) {
         self.filterName = filterName
         self.filterChangeMileage = filterChangeMileage
         self.serviceInterval = serviceInterval
+        self.currentMileage = currentMileage
     }
     
     func nextFilterChangeMileage() -> Int {
@@ -25,3 +27,6 @@ class CabinFilter {
     }
     
 }
+
+var cabinFilter = AirFilter(filterName: "Mann CU4590", filterChangeMileage: 145000, serviceInterval: 20000, currentMileage: 146000)
+

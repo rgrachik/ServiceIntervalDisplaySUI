@@ -31,7 +31,7 @@ struct MainOilView: View {
                                 Spacer()
                                 Text(oil.oilName)
                                     .foregroundColor(.white)
-                                    .font(.title)
+                                    .font(.title2)
                                     .bold()
                             }
                             
@@ -47,7 +47,7 @@ struct MainOilView: View {
                                 Image("oil")
                                     .colorMultiply(.green)
                                 
-                                Gauge (value: Double(oil.currentMileage), in: Double(oil.oilChangeMileage)...Double(oil.nextOilChangeMileage())) {}
+                                Gauge (value: Double(car.currentMileage), in: Double(oil.oilChangeMileage)...Double(oil.nextOilChangeMileage())) {}
                                     .foregroundColor(.white)
 //                                    .tint(.orange)
                                     .tint(gradient)
@@ -69,7 +69,7 @@ struct MainOilView: View {
                                 Text("Next service in:")
                                     .bold()
                                 Spacer()
-                                Text("\(oil.nextOilChangeMileage()-oil.currentMileage) km")
+                                Text("\(oil.nextOilChangeMileage()-car.currentMileage) km")
                                     .bold()
                                 
                             }

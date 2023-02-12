@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		27110EF229962013006D365D /* ServiceIntervalDisplaySUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27110EF129962013006D365D /* ServiceIntervalDisplaySUIApp.swift */; };
-		27110EF429962013006D365D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27110EF329962013006D365D /* ContentView.swift */; };
+		27110EF429962013006D365D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27110EF329962013006D365D /* MainView.swift */; };
 		27110EF629962014006D365D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27110EF529962014006D365D /* Assets.xcassets */; };
 		27110EF929962014006D365D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27110EF829962014006D365D /* Preview Assets.xcassets */; };
 		27110F0029962099006D365D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27110EFF29962099006D365D /* SettingsView.swift */; };
@@ -21,12 +21,16 @@
 		275FF16329964E6800BFE554 /* CabinFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275FF16229964E6800BFE554 /* CabinFilter.swift */; };
 		275FF16729964F9E00BFE554 /* GearOil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275FF16629964F9E00BFE554 /* GearOil.swift */; };
 		27EEF23F29992EAF00423E3D /* SmallAirView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EEF23E29992EAF00423E3D /* SmallAirView.swift */; };
+		27EEF2412999744800423E3D /* MainCabinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EEF2402999744800423E3D /* MainCabinView.swift */; };
+		27EEF243299977F500423E3D /* SmallCabinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EEF242299977F500423E3D /* SmallCabinView.swift */; };
+		27EEF2452999798400423E3D /* CarSettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EEF2442999798400423E3D /* CarSettingModel.swift */; };
+		27EEF2472999819700423E3D /* SmallGearOilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EEF2462999819700423E3D /* SmallGearOilView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		27110EEE29962013006D365D /* ServiceIntervalDisplaySUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ServiceIntervalDisplaySUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27110EF129962013006D365D /* ServiceIntervalDisplaySUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceIntervalDisplaySUIApp.swift; sourceTree = "<group>"; };
-		27110EF329962013006D365D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		27110EF329962013006D365D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		27110EF529962014006D365D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27110EF829962014006D365D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		27110EFF29962099006D365D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -39,6 +43,10 @@
 		275FF16229964E6800BFE554 /* CabinFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabinFilter.swift; sourceTree = "<group>"; };
 		275FF16629964F9E00BFE554 /* GearOil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GearOil.swift; sourceTree = "<group>"; };
 		27EEF23E29992EAF00423E3D /* SmallAirView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallAirView.swift; sourceTree = "<group>"; };
+		27EEF2402999744800423E3D /* MainCabinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCabinView.swift; sourceTree = "<group>"; };
+		27EEF242299977F500423E3D /* SmallCabinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCabinView.swift; sourceTree = "<group>"; };
+		27EEF2442999798400423E3D /* CarSettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarSettingModel.swift; sourceTree = "<group>"; };
+		27EEF2462999819700423E3D /* SmallGearOilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallGearOilView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,12 +99,15 @@
 		27110F07299642D2006D365D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				27110EF329962013006D365D /* ContentView.swift */,
+				27110EF329962013006D365D /* MainView.swift */,
 				27110F01299626C3006D365D /* MainOilView.swift */,
 				27110F0329963A23006D365D /* MainAirView.swift */,
+				27EEF2402999744800423E3D /* MainCabinView.swift */,
 				27110F0529963A5F006D365D /* MainGearOilView.swift */,
 				274C28A12997887E00407313 /* SmallOilView.swift */,
 				27EEF23E29992EAF00423E3D /* SmallAirView.swift */,
+				27EEF242299977F500423E3D /* SmallCabinView.swift */,
+				27EEF2462999819700423E3D /* SmallGearOilView.swift */,
 				27110EFF29962099006D365D /* SettingsView.swift */,
 			);
 			path = Views;
@@ -109,6 +120,7 @@
 				275FF16029964DC200BFE554 /* AirFilter.swift */,
 				275FF16229964E6800BFE554 /* CabinFilter.swift */,
 				275FF16629964F9E00BFE554 /* GearOil.swift */,
+				27EEF2442999798400423E3D /* CarSettingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -185,12 +197,16 @@
 			files = (
 				27110F0429963A23006D365D /* MainAirView.swift in Sources */,
 				27EEF23F29992EAF00423E3D /* SmallAirView.swift in Sources */,
+				27EEF2452999798400423E3D /* CarSettingModel.swift in Sources */,
 				274C28A22997887E00407313 /* SmallOilView.swift in Sources */,
-				27110EF429962013006D365D /* ContentView.swift in Sources */,
+				27110EF429962013006D365D /* MainView.swift in Sources */,
 				27110F0A29964313006D365D /* Oil.swift in Sources */,
 				27110EF229962013006D365D /* ServiceIntervalDisplaySUIApp.swift in Sources */,
 				275FF16129964DC200BFE554 /* AirFilter.swift in Sources */,
+				27EEF2472999819700423E3D /* SmallGearOilView.swift in Sources */,
 				275FF16329964E6800BFE554 /* CabinFilter.swift in Sources */,
+				27EEF243299977F500423E3D /* SmallCabinView.swift in Sources */,
+				27EEF2412999744800423E3D /* MainCabinView.swift in Sources */,
 				27110F02299626C3006D365D /* MainOilView.swift in Sources */,
 				27110F0029962099006D365D /* SettingsView.swift in Sources */,
 				27110F0629963A5F006D365D /* MainGearOilView.swift in Sources */,

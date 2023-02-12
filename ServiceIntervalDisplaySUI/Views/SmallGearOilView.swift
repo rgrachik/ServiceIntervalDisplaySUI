@@ -1,19 +1,19 @@
 //
-//  SmallOilView.swift
+//  SmallGearOilView.swift
 //  ServiceIntervalDisplaySUI
 //
-//  Created by Роман Грачик on 11.02.2023.
+//  Created by Роман Грачик on 12.02.2023.
 //
 
 import SwiftUI
 
-struct SmallOilView: View {
+struct SmallGearOilView: View {
     var body: some View {
         VStack {
             HStack {
                 VStack {
                     HStack {
-                        Text("Engine oil")
+                        Text("Gearbox oil")
                             .font(.title2)
                             .bold()
                         Spacer()
@@ -35,11 +35,10 @@ struct SmallOilView: View {
             }
         }
     }
-    
 }
 
-struct SmallOilView_Previews: PreviewProvider {
+struct SmallGearOilView_Previews: PreviewProvider {
     static var previews: some View {
-        SmallOilView()
+        SmallGearOilView()
     }
 }

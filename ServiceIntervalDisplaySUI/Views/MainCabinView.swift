@@ -1,21 +1,20 @@
 //
-//  AirView.swift
+//  MainCabinView.swift
 //  ServiceIntervalDisplaySUI
 //
-//  Created by Роман Грачик on 10.02.2023.
+//  Created by Роман Грачик on 12.02.2023.
 //
 
 import SwiftUI
 
-struct MainAirView: View {
+struct MainCabinView: View {
     var body: some View {
-        
         VStack {
             ScrollView {
                 VStack {
                     HStack {
                         
-                        Text("Air filters")
+                        Text("Cabin filters")
                             .foregroundColor(.white)
                             .font(.largeTitle)
                             .bold()
@@ -26,9 +25,9 @@ struct MainAirView: View {
                         VStack{
                             HStack {
                                 
-                                Text("Air filter")
+                                Text("Cabin filter")
                                 Spacer()
-                                Text("\(airFilter.filterName)")
+                                Text("\(cabinFilter.filterName)")
                                     .foregroundColor(.white)
                                     .font(.title3)
                             }
@@ -37,11 +36,11 @@ struct MainAirView: View {
                         .padding()
                         List{
                             HStack {
-                                Text("Next change in \(airFilter.nextFilterChangeMileage()-car.currentMileage) km")
+                                Text("Next change in \(cabinFilter.nextFilterChangeMileage()-car.currentMileage) km")
                                 Spacer()
-                                Gauge(value: Double(car.currentMileage), in: Double(airFilter.filterChangeMileage)...Double(airFilter.nextFilterChangeMileage())) {Text("Air")}
-                                    .foregroundColor(.cyan)
-                                    .tint(.cyan)
+                                Gauge(value: Double(car.currentMileage), in: Double(cabinFilter.filterChangeMileage)...Double(cabinFilter.nextFilterChangeMileage())) {Text("Cabin")}
+                                    .foregroundColor(.teal)
+                                    .tint(.teal)
                                     .gaugeStyle(.accessoryCircularCapacity)
                             }
                         }
@@ -49,7 +48,7 @@ struct MainAirView: View {
                         .cornerRadius(15)
                         .frame(height: 150)
                         .ignoresSafeArea()
-                        .shadow(color: .cyan, radius: 100)
+                        .shadow(color: .teal, radius: 100)
                         .padding()
                         
                         
@@ -63,28 +62,28 @@ struct MainAirView: View {
                         Divider()
                         Form {
                             HStack {
-                                Text("Air filter chaange mil.")
+                                Text("Cabin filter chaange mil.")
                                     .font(.headline)
                                 Spacer()
-                                Text("\(airFilter.filterChangeMileage) km")
+                                Text("\(cabinFilter.filterChangeMileage) km")
                             }
                             .padding(4)
                             
                             HStack {
-                                Text("Next air filter change")
+                                Text("Next cabin filter change")
                                     .font(.headline)
                                 Spacer()
-                                Text("\(airFilter.nextFilterChangeMileage()) km")
+                                Text("\(cabinFilter.nextFilterChangeMileage()) km")
                             }
                             .padding(4)
                             
+                          
                         }
                         .formStyle(.columns)
                         .scrollDisabled(true)
                         
                         .padding()
-                        
-                        Button("Change air",
+                        Button("Change filter",
                                action: {})
                         .bold()
                         .frame(width: 120, height: 40)
@@ -100,8 +99,8 @@ struct MainAirView: View {
     }
 }
 
-struct AirView_Previews: PreviewProvider {
+struct MainCabinView_Previews: PreviewProvider {
     static var previews: some View {
-        MainAirView()
+        MainCabinView()
     }
 }

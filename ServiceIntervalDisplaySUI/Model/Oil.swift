@@ -13,16 +13,14 @@ class Oil {
     let oilVolume: Float
     let oilFilterName: String
     let oilChangeMileage: Int
-    let currentMileage: Int
     let serviceInterval = 10000
     let oilSAEType = ["0w-10", "0w-20", "5w-30", "5w-40", "10w-40"]
     
-    init(oilName: String, oilVolume: Float, oilFilterName: String, oilChangeMileage: Int, currentMileage: Int) {
+    init(oilName: String, oilVolume: Float, oilFilterName: String, oilChangeMileage: Int) {
         self.oilName = oilName
         self.oilVolume = oilVolume
         self.oilFilterName = oilFilterName
         self.oilChangeMileage = oilChangeMileage
-        self.currentMileage = currentMileage
     }
     
     func nextOilChangeMileage() -> Int {
@@ -30,10 +28,10 @@ class Oil {
     }
     
     func percentOfWear() -> Int {
-        Int(Double(currentMileage-oilChangeMileage) / Double(serviceInterval) * 100)
+        Int(Double(car.currentMileage-oilChangeMileage) / Double(serviceInterval) * 100)
     }
     
 }
 
 
-var oil = Oil(oilName: "Liqui Molly Optimal", oilVolume: 4.7, oilFilterName: "Mann W67/1", oilChangeMileage: 145000, currentMileage: 147000)
+var oil = Oil(oilName: "Liqui Molly Optimal", oilVolume: 4.7, oilFilterName: "Mann W67/1", oilChangeMileage: 145000)

@@ -6,26 +6,27 @@
 //
 
 import SwiftUI
-struct ContentView: View {
+struct MainView: View {
     
     var body: some View {
-        
+     
         NavigationStack {
-            
-            VStack{
-                List{
+            Spacer()
+            Image("oil")
+                Form{
                     NavigationLink (destination: MainOilView(), label: {SmallOilView()})
-                    
+                
                     NavigationLink (destination: MainAirView(), label: {SmallAirView()})
-                    SmallOilView()
-                }
-                .listStyle(.inset)
-                .scrollDisabled(true)
+           
+                    NavigationLink (destination: MainCabinView(), label: {SmallCabinView()})
+                      }
+                
+            .scrollDisabled(true)
                 
                 HStack{
                     NavigationLink("Setttings", destination: SettingsView())
                     
-                        .navigationTitle(Text("Service Interval Display"))
+                      
                         .frame(width: 80, height: 40)
                         .background(Color.cyan)
                         .foregroundColor(.white)
@@ -38,7 +39,7 @@ struct ContentView: View {
                         .cornerRadius(10)
                         .foregroundColor(.white)
                 }
-            }
+                .navigationTitle(Text("Service Interval Display"))
         }
         
         .preferredColorScheme(.dark)
@@ -48,6 +49,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainView()
     }
 }
