@@ -8,10 +8,21 @@
 import SwiftUI
 
 struct UpdateMileageView: View {
+    @State private var textfieldData = ""
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+       
+        HStack {
+            TextField("\(car.currentMileage)", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                .textFieldStyle(.roundedBorder)
+                
+            
+            .padding()
+        }
+        .padding(30)
     }
+        
 }
+
 
 struct UpdateMileageView_Previews: PreviewProvider {
     static var previews: some View {

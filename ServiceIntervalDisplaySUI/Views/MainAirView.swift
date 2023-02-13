@@ -8,6 +8,21 @@
 import SwiftUI
 
 struct MainAirView: View {
+    
+    var tintColor: Color {
+        let value = Int(airFilter.percentOfWear())
+        switch value {
+        case 0...60:
+            return .green
+        case 61...90:
+            return .orange
+        case 91...100:
+            return .red
+        default:
+            return .gray
+        }
+    }
+    
     var body: some View {
         
         VStack {
@@ -39,8 +54,8 @@ struct MainAirView: View {
                                 Text("Next change in \(airFilter.nextFilterChangeMileage()-car.currentMileage) km")
                                 Spacer()
                                 Gauge(value: Double(car.currentMileage), in: Double(airFilter.filterChangeMileage)...Double(airFilter.nextFilterChangeMileage())) {Text("Air")}
-                                    .foregroundColor(.cyan)
-                                    .tint(.cyan)
+                                    .foregroundColor(tintColor)
+                                    .tint(tintColor)
                                     .gaugeStyle(.accessoryCircularCapacity)
                             }
                         }
@@ -48,7 +63,7 @@ struct MainAirView: View {
                         .cornerRadius(15)
                         .frame(height: 150)
                         .ignoresSafeArea()
-                        .shadow(color: .cyan, radius: 100)
+                        .shadow(color: tintColor, radius: 100)
                         .padding()
                         
                         

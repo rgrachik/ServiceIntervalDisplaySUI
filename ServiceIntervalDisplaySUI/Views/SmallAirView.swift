@@ -8,6 +8,20 @@
 import SwiftUI
 
 struct SmallAirView: View {
+    
+    var tintColor: Color {
+        let value = Int(airFilter.percentOfWear())
+        switch value {
+        case 0...60:
+            return .green
+        case 61...90:
+            return .orange
+        case 91...100:
+            return .red
+        default:
+            return .gray
+        }
+    }
     var body: some View {
    
             HStack {
@@ -26,7 +40,7 @@ struct SmallAirView: View {
                 Spacer()
                 Gauge (value: Double(car.currentMileage), in: Double(airFilter.filterChangeMileage)...Double(airFilter.nextFilterChangeMileage())) {Text("\(airFilter.percentOfWear()) %")}
                     .foregroundColor(.white)
-                    .tint(.cyan)
+                    .tint(tintColor)
                     .gaugeStyle(.accessoryCircularCapacity)
             }
             .preferredColorScheme(.dark)

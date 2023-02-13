@@ -8,6 +8,21 @@
 import SwiftUI
 
 struct MainCabinView: View {
+    
+    var tintColor: Color {
+        let value = Int(cabinFilter.percentOfWear())
+        switch value {
+        case 0...60:
+            return .green
+        case 61...90:
+            return .orange
+        case 91...100:
+            return .red
+        default:
+            return .gray
+        }
+    }
+    
     var body: some View {
         VStack {
             ScrollView {
@@ -38,9 +53,8 @@ struct MainCabinView: View {
                                 Text("Next change in \(cabinFilter.nextFilterChangeMileage()-car.currentMileage) km")
                                 Spacer()
                                 Gauge(value: Double(car.currentMileage), in: Double(cabinFilter.filterChangeMileage)...Double(cabinFilter.nextFilterChangeMileage())) {Text("Cabin")}
-                                    .foregroundColor(.mint
-                                    )
-                                    .tint(.mint)
+                                    .foregroundColor(tintColor)
+                                    .tint(tintColor)
                                     .gaugeStyle(.accessoryCircularCapacity)
                             }
                         }
@@ -48,7 +62,7 @@ struct MainCabinView: View {
                         .cornerRadius(15)
                         .frame(height: 150)
                         .ignoresSafeArea()
-                        .shadow(color: .mint, radius: 100)
+                        .shadow(color: tintColor, radius: 100)
                         .padding()
                         
                         

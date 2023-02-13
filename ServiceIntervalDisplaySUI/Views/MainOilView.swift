@@ -9,6 +9,20 @@ import SwiftUI
 
 struct MainOilView: View {
     
+    var tintColor: Color {
+        let value = Int(oil.percentOfWear())
+        switch value {
+        case 0...60:
+            return .green
+        case 61...90:
+            return .orange
+        case 91...100:
+            return .red
+        default:
+            return .gray
+        }
+    }
+    
     var body: some View {
         VStack {
             ZStack {
@@ -47,7 +61,7 @@ struct MainOilView: View {
                                 
                                 Gauge (value: Double(car.currentMileage), in: Double(oil.oilChangeMileage)...Double(oil.nextOilChangeMileage())) {}
                                     .foregroundColor(.white)
-                                    .tint(.orange)
+                                    .tint(tintColor)
                                     .gaugeStyle(.linearCapacity)
                                 
                                 Image("oil")
@@ -77,7 +91,7 @@ struct MainOilView: View {
                         .cornerRadius(15)
                         .frame(height: 200)
                         .ignoresSafeArea()
-                        .shadow(color: .orange, radius: 100)
+                        .shadow(color: tintColor, radius: 100)
                         
                         
                         .padding()

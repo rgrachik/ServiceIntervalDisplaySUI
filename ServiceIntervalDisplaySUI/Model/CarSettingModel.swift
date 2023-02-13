@@ -13,6 +13,8 @@ class CarSettings {
     init(currentMileage: Int) {
         self.currentMileage = currentMileage
     }
+    
+    
 }
 
 var car = CarSettings(currentMileage: 153450)

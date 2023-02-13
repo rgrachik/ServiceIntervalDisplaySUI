@@ -12,6 +12,7 @@ struct MainView: View {
     @State var isOnCabin = true
     @State var isOnGear = true
     
+    
     var body: some View {
         
         NavigationStack {
@@ -30,7 +31,7 @@ struct MainView: View {
                 if isOnGear {
                     NavigationLink (destination: MainGearOilView(), label: {SmallGearOilView()})
                 }
-                    NavigationLink(destination: UpdateMileageView(), label: {Text("Update current mileage")
+                NavigationLink(destination: UpdateMileageView(), label: {Text("Update current mileage")
                             .foregroundColor(.accentColor)
                     })
             
