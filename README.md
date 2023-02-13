@@ -17,4 +17,9 @@ Well, the settings screen. It will be possible to select an interval for trackin
 
 ![Photo-4](https://user-images.githubusercontent.com/112074005/218389642-ef7049c4-ca63-47dc-b260-893987376582.jpg)
 
+Added the ability to show and hide custom options such as air filters, cabin filters and gear oil. Engine oil cannot be hidden.
+
+![RPReplay_Final1676299098](https://user-images.githubusercontent.com/112074005/218489602-f5aec598-a51b-46ae-a3d1-37351ec5d7b0.gif)
+
 # The functionality is constantly being improved. All changes can be tracked here.
+
