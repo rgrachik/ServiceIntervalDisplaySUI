@@ -14,23 +14,22 @@ struct SmallGearOilView: View {
                 VStack {
                     HStack {
                         Text("Gearbox oil")
-                            .font(.title2)
+                            .font(.title3)
                             .bold()
                         Spacer()
                     }
                     
                     HStack {
-                        Text(oil.oilName)
-                            .font(.title3)
+                        Text(gearOil.oilName)
                         Spacer()
                     }
                     
                 }
                 .preferredColorScheme(.dark)
                 
-                Gauge (value: Double(car.currentMileage), in: Double(oil.oilChangeMileage)...Double(oil.nextOilChangeMileage())) {Text("\(oil.percentOfWear()) %")}
+                Gauge (value: Double(car.currentMileage), in: Double(gearOil.oilChangeMileage)...Double(gearOil.nextOilChangeMileage())) {Text("\(gearOil.percentOfWear()) %")}
                     .foregroundColor(.white)
-                    .tint(.orange)
+                    .tint(.red)
                     .gaugeStyle(.accessoryCircularCapacity)
             }
         }

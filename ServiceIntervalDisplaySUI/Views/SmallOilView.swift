@@ -14,14 +14,13 @@ struct SmallOilView: View {
                 VStack {
                     HStack {
                         Text("Engine oil")
-                            .font(.title2)
+                            .font(.title3)
                             .bold()
                         Spacer()
                     }
                     
                     HStack {
                         Text(oil.oilName)
-                            .font(.title3)
                         Spacer()
                     }
                     

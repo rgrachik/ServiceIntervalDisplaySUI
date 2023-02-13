@@ -31,4 +31,4 @@ class GearOil {
     
 }
 
-var gearOil = GearOil(oilName: "Motul", oilVolume: 8, oilChangeMileage: car.currentMileage)
+var gearOil = GearOil(oilName: "Motul", oilVolume: 8, oilChangeMileage: 125440)

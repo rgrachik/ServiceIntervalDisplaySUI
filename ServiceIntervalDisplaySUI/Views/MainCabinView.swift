@@ -25,7 +25,6 @@ struct MainCabinView: View {
                         VStack{
                             HStack {
                                 
-                                Text("Cabin filter")
                                 Spacer()
                                 Text("\(cabinFilter.filterName)")
                                     .foregroundColor(.white)
@@ -39,8 +38,9 @@ struct MainCabinView: View {
                                 Text("Next change in \(cabinFilter.nextFilterChangeMileage()-car.currentMileage) km")
                                 Spacer()
                                 Gauge(value: Double(car.currentMileage), in: Double(cabinFilter.filterChangeMileage)...Double(cabinFilter.nextFilterChangeMileage())) {Text("Cabin")}
-                                    .foregroundColor(.teal)
-                                    .tint(.teal)
+                                    .foregroundColor(.mint
+                                    )
+                                    .tint(.mint)
                                     .gaugeStyle(.accessoryCircularCapacity)
                             }
                         }
@@ -48,7 +48,7 @@ struct MainCabinView: View {
                         .cornerRadius(15)
                         .frame(height: 150)
                         .ignoresSafeArea()
-                        .shadow(color: .teal, radius: 100)
+                        .shadow(color: .mint, radius: 100)
                         .padding()
                         
                         

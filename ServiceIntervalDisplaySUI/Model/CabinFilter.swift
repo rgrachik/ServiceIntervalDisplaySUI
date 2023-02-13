@@ -28,5 +28,5 @@ class CabinFilter {
     
 }
 
-var cabinFilter = AirFilter(filterName: "Mann CU4590", filterChangeMileage: 145000, serviceInterval: 20000, currentMileage: 146000)
+var cabinFilter = AirFilter(filterName: "Mann CU4590", filterChangeMileage: 145000, serviceInterval: 20000, currentMileage: car.currentMileage)
 

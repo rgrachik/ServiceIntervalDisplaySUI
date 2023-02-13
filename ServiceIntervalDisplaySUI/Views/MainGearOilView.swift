@@ -26,7 +26,7 @@ struct MainGearOilView: View {
                         VStack{
                             HStack {
                                 Spacer()
-                                Text(oil.oilName)
+                                Text(gearOil.oilName)
                                     .foregroundColor(.white)
                                     .font(.title2)
                                     .bold()
@@ -34,7 +34,7 @@ struct MainGearOilView: View {
                             
                             HStack {
                                 Spacer()
-                                Text(oil.oilSAEType[3])
+                                Text(gearOil.oilSAEType[1])
                             }
                             
                         }
@@ -44,10 +44,10 @@ struct MainGearOilView: View {
                                 Image("oil")
                                     .colorMultiply(.green)
                                 
-                                Gauge (value: Double(car.currentMileage), in: Double(oil.oilChangeMileage)...Double(oil.nextOilChangeMileage())) {}
+                                Gauge (value: Double(car.currentMileage), in: Double(gearOil.oilChangeMileage)...Double(gearOil.nextOilChangeMileage())) {}
                                     .foregroundColor(.white)
-//                                    .tint(.orange)
-                                   
+                                    .tint(.blue)
+                                
                                     .gaugeStyle(.linearCapacity)
                                 
                                 Image("oil")
@@ -56,8 +56,8 @@ struct MainGearOilView: View {
                             HStack {
                                 Text("Oil wear:")
                                     .bold()
-                               Spacer()
-                                Text("\(oil.percentOfWear()) %")
+                                Spacer()
+                                Text("\(gearOil.percentOfWear()) %")
                                     .bold()
                                 
                             }
@@ -66,7 +66,7 @@ struct MainGearOilView: View {
                                 Text("Next service in:")
                                     .bold()
                                 Spacer()
-                                Text("\(oil.nextOilChangeMileage()-car.currentMileage) km")
+                                Text("\(gearOil.nextOilChangeMileage()-car.currentMileage) km")
                                     .bold()
                                 
                             }
@@ -92,21 +92,14 @@ struct MainGearOilView: View {
                         Divider()
                         Form {
                             
-                            HStack {
-                                
-                                Text("Oil filter")
-                                    .font(.headline)
-                                Spacer()
-                                Text("\(oil.oilFilterName)")
-                            }
-                            .padding(4)
+                            
                             
                             HStack {
                                 
                                 Text("Oil volume")
                                     .font(.headline)
                                 Spacer()
-                                Text("\(oil.oilVolume) L")
+                                Text("\(gearOil.oilVolume) L")
                             }
                             .padding(4)
                             
@@ -114,7 +107,7 @@ struct MainGearOilView: View {
                                 Text("Change mileage")
                                     .font(.headline)
                                 Spacer()
-                                Text("\(oil.oilChangeMileage) km")
+                                Text("\(gearOil.oilChangeMileage) km")
                             }
                             .padding(4)
                             
@@ -122,22 +115,22 @@ struct MainGearOilView: View {
                                 Text("Next change")
                                     .font(.headline)
                                 Spacer()
-                                Text("\(oil.nextOilChangeMileage()) km")
+                                Text("\(gearOil.nextOilChangeMileage()) km")
                             }
                             .padding(4)
                         }
                         .formStyle(.columns)
                         .scrollDisabled(true)
                         
-                       Spacer()
-                            Button("Change oil",
-                                   action: {})
-                            .bold()
-                            .frame(width: 100, height: 40)
-                            .background(Color.green)
-                            .cornerRadius(10)
-                            .foregroundColor(.white)
-                            
+                        Spacer()
+                        Button("Change oil",
+                               action: {})
+                        .bold()
+                        .frame(width: 100, height: 40)
+                        .background(Color.green)
+                        .cornerRadius(10)
+                        .foregroundColor(.white)
+                        
                         
                         
                     }

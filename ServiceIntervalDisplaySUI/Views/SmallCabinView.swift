@@ -13,20 +13,19 @@ struct SmallCabinView: View {
             VStack {
                 HStack {
                     Text("Cabin filter")
-                        .font(.title2)
+                        .font(.title3)
                     .bold()
                     Spacer()
                 }
                 HStack {
                     Text("\(cabinFilter.filterName)")
-                        .font(.title3)
                     Spacer()
                 }
             }
             Spacer()
             Gauge (value: Double(car.currentMileage), in: Double(cabinFilter.filterChangeMileage)...Double(cabinFilter.nextFilterChangeMileage())) {Text("\(cabinFilter.percentOfWear()) %")}
                 .foregroundColor(.white)
-                .tint(.blue)
+                .tint(.mint)
                 .gaugeStyle(.accessoryCircularCapacity)
         }
         .preferredColorScheme(.dark)

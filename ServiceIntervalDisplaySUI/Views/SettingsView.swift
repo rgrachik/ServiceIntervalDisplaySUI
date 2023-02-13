@@ -38,7 +38,7 @@ struct SettingsView: View {
                 Spacer()
                 
                     .navigationTitle(Text("Settings"))
-                    .navigationBarTitleDisplayMode(.large)
+                    .navigationBarTitleDisplayMode(.inline)
             }
         }
     }

@@ -15,4 +15,4 @@ class CarSettings {
     }
 }
 
-var car = CarSettings(currentMileage: 153000)
+var car = CarSettings(currentMileage: 153450)

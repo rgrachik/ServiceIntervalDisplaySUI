@@ -14,20 +14,19 @@ struct SmallAirView: View {
                 VStack {
                     HStack {
                         Text("Air filter")
-                            .font(.title2)
+                            .font(.title3)
                         .bold()
                         Spacer()
                     }
                     HStack {
                         Text("\(airFilter.filterName)")
-                            .font(.title3)
                         Spacer()
                     }
                 }
                 Spacer()
                 Gauge (value: Double(car.currentMileage), in: Double(airFilter.filterChangeMileage)...Double(airFilter.nextFilterChangeMileage())) {Text("\(airFilter.percentOfWear()) %")}
                     .foregroundColor(.white)
-                    .tint(.blue)
+                    .tint(.cyan)
                     .gaugeStyle(.accessoryCircularCapacity)
             }
             .preferredColorScheme(.dark)

@@ -30,4 +30,4 @@ class AirFilter {
     
 }
 
-var airFilter = AirFilter(filterName: "Mann C26590", filterChangeMileage: 145000, serviceInterval: 10000, currentMileage: 146000)
+var airFilter = AirFilter(filterName: "Mann C26590", filterChangeMileage: 145000, serviceInterval: 10000, currentMileage: car.currentMileage)
