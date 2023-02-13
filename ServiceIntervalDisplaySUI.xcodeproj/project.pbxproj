@@ -25,6 +25,7 @@
 		27EEF243299977F500423E3D /* SmallCabinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EEF242299977F500423E3D /* SmallCabinView.swift */; };
 		27EEF2452999798400423E3D /* CarSettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EEF2442999798400423E3D /* CarSettingModel.swift */; };
 		27EEF2472999819700423E3D /* SmallGearOilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EEF2462999819700423E3D /* SmallGearOilView.swift */; };
+		27EEF24B299A7E7A00423E3D /* UpdateMileageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EEF24A299A7E7A00423E3D /* UpdateMileageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		27EEF242299977F500423E3D /* SmallCabinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCabinView.swift; sourceTree = "<group>"; };
 		27EEF2442999798400423E3D /* CarSettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarSettingModel.swift; sourceTree = "<group>"; };
 		27EEF2462999819700423E3D /* SmallGearOilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallGearOilView.swift; sourceTree = "<group>"; };
+		27EEF24A299A7E7A00423E3D /* UpdateMileageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateMileageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				27EEF242299977F500423E3D /* SmallCabinView.swift */,
 				27EEF2462999819700423E3D /* SmallGearOilView.swift */,
 				27110EFF29962099006D365D /* SettingsView.swift */,
+				27EEF24A299A7E7A00423E3D /* UpdateMileageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				27110F0429963A23006D365D /* MainAirView.swift in Sources */,
 				27EEF23F29992EAF00423E3D /* SmallAirView.swift in Sources */,
 				27EEF2452999798400423E3D /* CarSettingModel.swift in Sources */,
+				27EEF24B299A7E7A00423E3D /* UpdateMileageView.swift in Sources */,
 				274C28A22997887E00407313 /* SmallOilView.swift in Sources */,
 				27110EF429962013006D365D /* MainView.swift in Sources */,
 				27110F0A29964313006D365D /* Oil.swift in Sources */,

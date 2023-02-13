@@ -83,13 +83,9 @@ struct MainCabinView: View {
                         .scrollDisabled(true)
                         
                         .padding()
-                        Button("Change filter",
+                        Button("Change cabin filter",
                                action: {})
-                        .bold()
-                        .frame(width: 120, height: 40)
-                        .background(Color.green)
-                        .cornerRadius(10)
-                        .foregroundColor(.white)
+                        .foregroundColor(.accentColor)
                     }
                 }
             }

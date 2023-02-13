@@ -8,42 +8,44 @@
 import SwiftUI
 struct MainView: View {
     
+    @State var isOnAir = true
+    @State var isOnCabin = true
+    @State var isOnGear = true
+    
     var body: some View {
         
         NavigationStack {
             Spacer()
-            Form{
-                NavigationLink (destination: MainOilView(), label: {SmallOilView()})
+            Text("Current mileage \(car.currentMileage) km")
+                .font(.title3)
+            List {
                 
-                NavigationLink (destination: MainAirView(), label: {SmallAirView()})
+                    NavigationLink (destination: MainOilView(), label: {SmallOilView()})
+                if isOnAir {
+                    NavigationLink (destination: MainAirView(), label: {SmallAirView()})
+                }
+                if isOnCabin {
+                    NavigationLink (destination: MainCabinView(), label: {SmallCabinView()})
+                }
+                if isOnGear {
+                    NavigationLink (destination: MainGearOilView(), label: {SmallGearOilView()})
+                }
+                    NavigationLink(destination: UpdateMileageView(), label: {Text("Update current mileage")
+                            .foregroundColor(.accentColor)
+                    })
+            
+                    NavigationLink(destination: SettingsView(isOnAir: $isOnAir, isOnCabin: $isOnCabin, isOnGear: $isOnGear), label: {Button("Settinngs", action: {})})
                 
-                NavigationLink (destination: MainCabinView(), label: {SmallCabinView()})
                 
-                NavigationLink (destination: MainGearOilView(), label: {SmallGearOilView()})
             }
             
             .scrollDisabled(true)
-            
-            HStack{
-                NavigationLink("Setttings", destination: SettingsView())
-                
-                
-                    .frame(width: 80, height: 40)
-                    .background(Color.cyan)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-                    .padding()
-                
-                Button("Update", action: {})
-                    .frame(width: 80, height: 40)
-                    .background(Color.green)
-                    .cornerRadius(10)
-                    .foregroundColor(.white)
-            }
+  
             .navigationTitle(Text("Service Interval Display"))
         }
         
         .preferredColorScheme(.dark)
+        
     }
     
 }

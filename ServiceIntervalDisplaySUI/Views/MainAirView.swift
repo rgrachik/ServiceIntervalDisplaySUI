@@ -83,13 +83,9 @@ struct MainAirView: View {
                         
                         .padding()
                         
-                        Button("Change air",
+                        Button("Change air filter",
                                action: {})
-                        .bold()
-                        .frame(width: 120, height: 40)
-                        .background(Color.green)
-                        .cornerRadius(10)
-                        .foregroundColor(.white)
+                        .foregroundColor(.accentColor)
                     }
                 }
             }

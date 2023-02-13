@@ -125,11 +125,7 @@ struct MainGearOilView: View {
                         Spacer()
                         Button("Change oil",
                                action: {})
-                        .bold()
-                        .frame(width: 100, height: 40)
-                        .background(Color.green)
-                        .cornerRadius(10)
-                        .foregroundColor(.white)
+                        .foregroundColor(.accentColor)
                         
                         
                         

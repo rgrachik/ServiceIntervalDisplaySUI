@@ -9,8 +9,6 @@ import SwiftUI
 
 struct MainOilView: View {
     
-    let gradient = Gradient(colors: [.green, .red])
-    
     var body: some View {
         VStack {
             ZStack {
@@ -49,8 +47,7 @@ struct MainOilView: View {
                                 
                                 Gauge (value: Double(car.currentMileage), in: Double(oil.oilChangeMileage)...Double(oil.nextOilChangeMileage())) {}
                                     .foregroundColor(.white)
-//                                    .tint(.orange)
-                                    .tint(gradient)
+                                    .tint(.orange)
                                     .gaugeStyle(.linearCapacity)
                                 
                                 Image("oil")
@@ -59,7 +56,7 @@ struct MainOilView: View {
                             HStack {
                                 Text("Oil wear:")
                                     .bold()
-                               Spacer()
+                                Spacer()
                                 Text("\(oil.percentOfWear()) %")
                                     .bold()
                                 
@@ -132,20 +129,14 @@ struct MainOilView: View {
                         .formStyle(.columns)
                         .scrollDisabled(true)
                         
-                       Spacer()
-                            Button("Change oil",
-                                   action: {})
-                            .bold()
-                            .frame(width: 100, height: 40)
-                            .background(Color.green)
-                            .cornerRadius(10)
-                            .foregroundColor(.white)
-                            
-                        
-                        
                     }
-                    Spacer()
+                    
+                    Button("Change oil",
+                           action: {})
+                    .foregroundColor(.accentColor)
+                    .padding(40)
                 }
+                
             }
             
             Spacer()
