@@ -1,4 +1,7 @@
 # Service Interval Display SwiftUI
+
+This is my own study project.
+
 An application for tracking service intervals when servicing a car.
 
 It is under active development.
